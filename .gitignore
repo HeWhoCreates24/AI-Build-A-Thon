@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Runtime data
+crisis_detection/data/screenshots/*.png
+crisis_detection/data/webcam_captures/*.jpg
+crisis_detection/data/logs/*.log
+crisis_detection/data/logs/alerts/*.json
+crisis_detection/data/evidence/
+
+# ML models (large files)
+crisis_detection/models/distress_model/*.bin
+crisis_detection/models/distress_model/*.safetensors
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+dist/
+build/
+*.egg-info/

@@ -1,0 +1,32 @@
+# Crisis Detection System - Python Dependencies
+# ==============================================
+
+# Core dependencies
+mss>=9.0.0                  # Fast screenshot capture
+pytesseract>=0.3.10         # OCR wrapper
+Pillow>=10.0.0              # Image processing
+opencv-python>=4.8.0        # Computer vision (webcam, preprocessing)
+PyYAML>=6.0                 # Configuration files
+
+# NLP and ML (Optional but recommended)
+# Uncomment for ML-based distress detection:
+transformers>=4.30.0        # HuggingFace transformers
+torch>=2.0.0                # PyTorch (CPU version)
+# For faster inference:
+# onnxruntime>=1.15.0       # ONNX runtime for optimized models
+
+# Text processing
+# spacy>=3.6.0              # Advanced NLP (optional)
+
+# Server/Dashboard (Optional)
+# fastapi>=0.100.0          # API server
+# uvicorn>=0.23.0           # ASGI server
+# jinja2>=3.1.0             # Templating
+
+# Testing
+pytest>=7.4.0               # Testing framework
+pytest-cov>=4.1.0           # Coverage
+
+# Development
+black>=23.0.0               # Code formatting
+flake8>=6.0.0               # Linting

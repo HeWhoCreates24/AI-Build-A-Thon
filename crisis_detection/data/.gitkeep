@@ -1,0 +1,7 @@
+# Data directories
+# These will be populated at runtime
+
+*.png
+*.jpg
+*.log
+*.json

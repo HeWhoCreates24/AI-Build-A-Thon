@@ -1,0 +1,51 @@
+# Crisis Detection System Configuration
+# ======================================
+
+# Screenshot Capture Settings
+screenshot:
+  capture_interval_seconds: 30      # How often to capture screenshots
+  screenshot_dir: crisis_detection/data/screenshots
+  max_screenshots: 100              # Maximum screenshots to keep in buffer
+
+# OCR Settings
+ocr:
+  preprocess: true                  # Enable image preprocessing for better OCR
+  tesseract_path: null              # Auto-detect (set for Windows if needed)
+  # Windows example: C:\Program Files\Tesseract-OCR\tesseract.exe
+
+# NLP Model Settings
+nlp:
+  mode: auto                        # Options: 'ml', 'rules', 'auto'
+  model_path: crisis_detection/models/distress_model
+  model_name: distilbert-base-uncased
+  allow_online_model_download: false # Keep offline by default
+
+# Risk Engine Settings
+risk:
+  time_window_minutes: 15           # Rolling time window for aggregation
+  alert_threshold: 0.65             # Risk score threshold (0-1)
+  min_samples: 5                    # Minimum samples before alerting
+  alert_cooldown_minutes: 30        # Time between alerts
+
+# Webcam Capture Settings
+webcam:
+  camera_index: 0                   # 0 = default camera
+  save_dir: crisis_detection/data/webcam_captures
+  blur_background: false            # Privacy: blur background
+  max_captures: 50                  # Maximum captures to keep
+
+# Alert Settings
+alerts:
+  alert_log_dir: crisis_detection/data/logs/alerts
+  evidence_dir: crisis_detection/data/evidence
+  notification_methods:
+    - log                           # Log to system logger
+    - file                          # Write to alert summary file
+    # - email                       # Uncomment to enable email
+  admin_email: null                 # Set for email notifications
+
+# Logging Settings
+logging:
+  level: INFO                       # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_file: crisis_detection/data/logs/system.log
+  console_output: true              # Print logs to console
